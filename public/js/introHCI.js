@@ -20,7 +20,7 @@ function initializePage() {
 function initGestures() {
 	// add gestures listener here
 	$(function(){
-		$(".judge-img").bind("taphold", tapholdHander);
+		$(".judge-img").bind("taphold", tapholdHandler);
 
 		function tapholdHandler(event){
 			//get the id of the event source
@@ -40,7 +40,7 @@ function initRSVPForm() {
   	console.log("submitting form...");
   		var rsvpEmail = $('#rsvpEmail').val();
   		// Send the POST request
-  		$.post('addRSVP', { rvspEmail: rvspEmail }, postCallback);
+  		$.post('addRSVP', { rsvpEmail: rsvpEmail }, postCallback);
   	});
 
   	function postCallback(res) {
